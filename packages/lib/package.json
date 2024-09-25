@@ -1,0 +1,26 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "exports": {
+    "./redis": "./dist/redis.js",
+    "./rabbit": "./dist/rabbit.js",
+    "./node-cache" : "./dist/node-cache.js"
+  },
+  "scripts": {
+    "dev": "npx tsc --watch",
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "env": "workspace:^",
+    "node-cache": "^5.1.2",
+    "redis": "^4.6.9",
+    "typescript": "^5.2.2"
+  }
+}

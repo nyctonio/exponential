@@ -1,0 +1,142 @@
+
+---
+name: Production CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  cache-and-install:
+    runs-on: self-hosted
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm install
+      - name: Create .env File
+        run: >
+          echo "TRADE_PORT=${{ secrets.TRADE_PORT }}" >> .env
+          
+          echo "API_PORT=${{ secrets.API_PORT }}" >> .env
+          
+          echo "EMITTER_PORT=${{ secrets.EMITTER_PORT }}" >> .env
+          
+          echo "SOCKET_PORT=${{ secrets.SOCKET_PORT }}" >> .env
+          
+          echo "PUBLISHER_PORT=${{ secrets.PUBLISHER_PORT }}" >> .env
+          
+          echo "LIVE_PORT=${{ secrets.LIVE_PORT }}" >> .env
+
+          echo "LOGGER_PORT=${{ secrets.LOGGER_PORT }}" >> .env
+          
+          echo "SEED_DATABASE=${{ secrets.SEED_DATABASE }}" >> .env
+          
+          echo "SEED_USER_NAME=${{ secrets.SEED_USER_NAME }}" >> .env
+          
+          echo "SEED_PASSWORD=${{ secrets.SEED_PASSWORD }}" >> .env
+          
+          echo "SEED_HOST_NAME=${{ secrets.SEED_HOST_NAME }}" >> .env
+          
+          echo "SEED_DATABASE_PORT=${{ secrets.SEED_DATABASE_PORT }}" >> .env
+          
+          echo "DATABASE=${{ secrets.DATABASE }}" >> .env
+          
+          echo "USER_NAME=${{ secrets.USER_NAME }}" >> .env
+          
+          echo "PASSWORD=${{ secrets.PASSWORD }}" >> .env
+          
+          echo "HOST_NAME=${{ secrets.HOST_NAME }}" >> .env
+          
+          echo "DATABASE_PORT=${{ secrets.DATABASE_PORT }}" >> .env
+          
+          echo "SYNCRONIZE=${{ secrets.SYNCRONIZE }}" >> .env
+          
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          
+          echo "JWT_EXPIRES_IN=${{ secrets.JWT_EXPIRES_IN }}" >> .env
+          
+          echo "JWT_RESET_SECRET=${{ secrets.JWT_RESET_SECRET }}" >> .env
+          
+          echo "JWT_TOKEN_EXPIRES_IN=${{ secrets.JWT_TOKEN_EXPIRES_IN }}" >> .env
+          
+          echo "JWT_RESET_TOKEN_EXPIRES_IN=${{ secrets.JWT_RESET_TOKEN_EXPIRES_IN }}" >> .env
+          
+          echo "SALT_ROUNDS=${{ secrets.SALT_ROUNDS }}" >> .env
+          
+          echo "REDIS_HOST=${{ secrets.REDIS_HOST }}" >> .env
+          
+          echo "REDIS_PORT=${{ secrets.REDIS_PORT }}" >> .env
+          
+          echo "REDIS_USER=${{ secrets.REDIS_USER }}" >> .env
+          
+          echo "REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }}" >> .env
+          
+          echo "REDIS_URL=${{ secrets.REDIS_URL }}" >> .env
+          
+          echo "MONGO=${{ secrets.MONGO }}" >> .env
+          
+          echo "ENVIRONMENT=${{ secrets.ENVIRONMENT }}" >> .env
+          
+          echo "QUEUE_NAME=${{ secrets.QUEUE_NAME }}" >> .env
+          
+          echo "QUEUE_HOST=${{ secrets.QUEUE_HOST }}" >> .env
+          
+          echo "ORDER_QUEUE=${{ secrets.ORDER_QUEUE }}" >> .env
+          
+          echo "TRADE_DATA_QUEUE=${{ secrets.TRADE_DATA_QUEUE }}" >> .env
+          
+          echo "LIMIT_ORDER_QUEUE=${{ secrets.LIMIT_ORDER_QUEUE }}" >> .env
+          
+          echo "ZERODHA_API_KEY=${{ secrets.ZERODHA_API_KEY }}" >> .env
+          
+          echo "ZERODHA_URL=${{ secrets.ZERODHA_URL }}" >> .env
+          
+          echo "ZERODHA_API_SECRET=${{ secrets.ZERODHA_API_SECRET }}" >> .env
+          
+          echo "NEXT_PUBLIC_BACKEND=${{ secrets.NEXT_PUBLIC_BACKEND }}" >> .env
+          
+          echo "NEXT_PUBLIC_SOCKET_URL=${{ secrets.NEXT_PUBLIC_SOCKET_URL }}" >> .env
+          
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> .env
+          
+      - name: Typescript Build
+        run: pnpm build
+      - name: Install pm2
+        run: npm i pm2 -g
+      - name: Start All Services
+        run: |
+          pm2 delete api || : && pm2 start "pnpm start --filter api" -i 1 --name 'api'
+          pm2 delete emitter || : && pm2 start "pnpm start --filter emitter" -i 1 --name 'emitter'
+          pm2 delete logger || : && pm2 start "pnpm start --filter logger" -i 1 --name 'logger'
+          pm2 delete publisher || : && pm2 start "pnpm start --filter publisher" -i 1 --name 'publisher'
+          pm2 delete socket || : && pm2 start "pnpm start --filter socket" -i 1 --name 'socket'
+          pm2 delete trade || : && pm2 start "pnpm start --filter trade" -i 1 --name 'trade'
+          pm2 delete live || : && pm2 start "pnpm start --filter live" -i 1 --name 'live'
+          pm2 delete client || : && pm2 start "pnpm start --filter client" -i 1 --name 'client'
+          pm2 save

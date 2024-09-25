@@ -1,0 +1,330 @@
+[
+  {
+    "prjSettName": "USERTYPE",
+    "prjSettKey": "USRTYP",
+    "prjSettDisplayName": "Company",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Company"
+  },
+  {
+    "prjSettName": "USERTYPE",
+    "prjSettKey": "USRTYP",
+    "prjSettDisplayName": "Broker",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Broker"
+  },
+  {
+    "prjSettName": "USERTYPE",
+    "prjSettKey": "USRTYP",
+    "prjSettDisplayName": "Sub-Broker",
+    "prjSettSortOrder": 3,
+    "prjSettActive": true,
+    "prjSettConstant": "Sub-Broker"
+  },
+  {
+    "prjSettName": "USERTYPE",
+    "prjSettKey": "USRTYP",
+    "prjSettDisplayName": "Client",
+    "prjSettSortOrder": 4,
+    "prjSettActive": true,
+    "prjSettConstant": "Client"
+  },
+  {
+    "prjSettName": "Gender",
+    "prjSettKey": "USRGENDER",
+    "prjSettDisplayName": "Male",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Male"
+  },
+  {
+    "prjSettName": "Gender",
+    "prjSettKey": "USRGENDER",
+    "prjSettDisplayName": "Female",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Female"
+  },
+  {
+    "prjSettName": "City",
+    "prjSettKey": "USRCITY",
+    "prjSettDisplayName": "New Delhi",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "New Delhi"
+  },
+  {
+    "prjSettName": "City",
+    "prjSettKey": "USRCITY",
+    "prjSettDisplayName": "Mumbai",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Mumbai"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "No Time Limit",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "No Time Limit"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "5 Minute",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "5 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "10 Minute",
+    "prjSettSortOrder": 3,
+    "prjSettActive": true,
+    "prjSettConstant": "10 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "15 Minute",
+    "prjSettSortOrder": 4,
+    "prjSettActive": true,
+    "prjSettConstant": "15 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "20 Minute",
+    "prjSettSortOrder": 5,
+    "prjSettActive": true,
+    "prjSettConstant": "20 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "30 Minute",
+    "prjSettSortOrder": 6,
+    "prjSettActive": true,
+    "prjSettConstant": "30 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "45 Minute",
+    "prjSettSortOrder": 7,
+    "prjSettActive": true,
+    "prjSettConstant": "45 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "60 Minutes",
+    "prjSettSortOrder": 8,
+    "prjSettActive": true,
+    "prjSettConstant": "60 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "90 Minute",
+    "prjSettSortOrder": 9,
+    "prjSettActive": true,
+    "prjSettConstant": "90 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "120 Minute",
+    "prjSettSortOrder": 10,
+    "prjSettActive": true,
+    "prjSettConstant": "120 Minute"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "24 Hrs",
+    "prjSettSortOrder": 11,
+    "prjSettActive": true,
+    "prjSettConstant": "24 Hrs"
+  },
+  {
+    "prjSettName": "User Status",
+    "prjSettKey": "USRSTAT",
+    "prjSettDisplayName": "Active",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Active"
+  },
+  {
+    "prjSettName": "User Status",
+    "prjSettKey": "USRSTAT",
+    "prjSettDisplayName": "Inactive",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Inactive"
+  },
+  {
+    "prjSettName": "User Status",
+    "prjSettKey": "USRSTAT",
+    "prjSettDisplayName": "Suspended",
+    "prjSettSortOrder": 3,
+    "prjSettActive": true,
+    "prjSettConstant": "Suspended"
+  },
+  {
+    "prjSettName": "User Status",
+    "prjSettKey": "USRSTAT",
+    "prjSettDisplayName": "Only Square Off",
+    "prjSettSortOrder": 4,
+    "prjSettActive": true,
+    "prjSettConstant": "Only Square Off"
+  },
+  {
+    "prjSettName": "USERTYPE",
+    "prjSettKey": "USRTYP",
+    "prjSettDisplayName": "User Type",
+    "prjSettSortOrder": -1,
+    "prjSettActive": true,
+    "prjSettConstant": "User Type"
+  },
+  {
+    "prjSettName": "Trade SquareOff Time Limit",
+    "prjSettKey": "TRDSQOL",
+    "prjSettDisplayName": "Trade Square Off Limit",
+    "prjSettSortOrder": -1,
+    "prjSettActive": true,
+    "prjSettConstant": "Trade Square Off Limit"
+  },
+  {
+    "prjSettName": "Transaction Type",
+    "prjSettKey": "TRXNTYP",
+    "prjSettDisplayName": "Credit",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Credit"
+  },
+  {
+    "prjSettName": "Transaction Type",
+    "prjSettKey": "TRXNTYP",
+    "prjSettDisplayName": "Debit",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Debit"
+  },
+  {
+    "prjSettName": "Transaction Particular",
+    "prjSettKey": "TRXNPRT",
+    "prjSettDisplayName": "Initial Deposit",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Initial Deposit"
+  },
+  {
+    "prjSettName": "Transaction Particular",
+    "prjSettKey": "TRXNPRT",
+    "prjSettDisplayName": "Subsequent Deposit",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Subsequent Deposit"
+  },
+  {
+    "prjSettName": "Transaction Particular",
+    "prjSettKey": "TRXNPRT",
+    "prjSettDisplayName": "Subsequent Withdrawal",
+    "prjSettSortOrder": 3,
+    "prjSettActive": true,
+    "prjSettConstant": "Subsequent Withdrawal"
+  },
+  {
+    "prjSettName": "Transaction Particular",
+    "prjSettKey": "TRXNPRT",
+    "prjSettDisplayName": "Sell Settelment",
+    "prjSettSortOrder": 4,
+    "prjSettActive": true,
+    "prjSettConstant": "Sell Settelment"
+  },
+  {
+    "prjSettName": "Transaction Particular",
+    "prjSettKey": "TRXNPRT",
+    "prjSettDisplayName": "Buy Settelment",
+    "prjSettSortOrder": 5,
+    "prjSettActive": true,
+    "prjSettConstant": "Buy Settelment"
+  },
+  {
+    "prjSettName": "Margin Type",
+    "prjSettKey": "MRGTYP",
+    "prjSettDisplayName": "Percentage",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Percentage"
+  },
+  {
+    "prjSettName": "Margin Type",
+    "prjSettKey": "MRGTYP",
+    "prjSettDisplayName": "Per Lot",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Per Lot"
+  },
+  {
+    "prjSettName": "Brokerage Type",
+    "prjSettKey": "BRKGTYP",
+    "prjSettDisplayName": "Per Crore",
+    "prjSettSortOrder": 1,
+    "prjSettActive": true,
+    "prjSettConstant": "Per Crore"
+  },
+  {
+    "prjSettName": "Brokerage Type",
+    "prjSettKey": "BRKGTYP",
+    "prjSettDisplayName": "Per Lot",
+    "prjSettSortOrder": 2,
+    "prjSettActive": true,
+    "prjSettConstant": "Per Lot"
+  },
+  {
+    "prjSettName": "qwerty",
+    "prjSettKey": "BRKGTYP",
+    "prjSettDisplayName": "qwewr",
+    "prjSettSortOrder": 4,
+    "prjSettActive": true,
+    "prjSettConstant": "qwe"
+  },
+  {
+    "prjSettName": "User Bid Settings Cmp",
+    "prjSettKey": "USRBIDCMP",
+    "prjSettDisplayName": "1",
+    "prjSettSortOrder": 0,
+    "prjSettActive": true,
+    "prjSettConstant": "1"
+  },
+  {
+    "prjSettName": "User MCX Bid",
+    "prjSettKey": "USRMCXBID",
+    "prjSettDisplayName": "1000",
+    "prjSettSortOrder": 0,
+    "prjSettActive": true,
+    "prjSettConstant": "1000"
+  },
+  {
+    "prjSettName": "User MCX Stop Amount",
+    "prjSettKey": "USRMCXSTOP",
+    "prjSettDisplayName": "1000",
+    "prjSettSortOrder": 0,
+    "prjSettActive": true,
+    "prjSettConstant": "1000"
+  },
+  {
+    "prjSettName": "User MCX Names",
+    "prjSettKey": "USRMCXNAME",
+    "prjSettDisplayName": "Gold",
+    "prjSettSortOrder": 0,
+    "prjSettActive": true,
+    "prjSettConstant": "Gold"
+  }
+]

@@ -1,0 +1,16 @@
+export const AuthConstants = {
+  NOT_FOUND: 'User Not Found',
+  WRONG_PASSWORD: 'Wrong Password',
+  ACCOUNT_LOCKED: 'Account Locked',
+  SUSPENDED_INACTIVE: 'Account Not Accessible',
+  VALID_TILL_DATE_EXPIRED: 'Account Expired',
+  SUCCESS: 'Login Successfull',
+  TOKEN_EXPIRED: 'Token Expired! Please Relogin',
+  TOKEN_NOT_AVAILABLE: 'Please attach token in headers',
+  MULTIPLE_LOGIN: 'Multiple login detected',
+  RESET_REQUIRED: 'First login',
+  TOKEN_MISUSE: 'Not your row!!!',
+  RESET_OLD_NEW_PASSWORD_MATCH: `Passwords can't be same`,
+  RESET_OLD_PASSWORD_WRONG: 'Please enter correct old password',
+  RESET_PASSWORD_SUCCESS: 'Reset password successfull',
+};

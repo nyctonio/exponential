@@ -1,0 +1,39 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "exports": {
+    "./sql": "./dist/sql/index.js",
+    "./sql/models": "./dist/sql/models.js",
+    "./sql/schema": "./dist/sql/schema/index.js",
+    "./mongodb": "./dist/mongodb/index.js",
+    "./mongodb/models": "./dist/mongodb/models/index.js"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npx tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "ts-node-dev sql/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "class-validator": "^0.14.0",
+    "cli-loading-animation": "^1.0.6",
+    "cli-spinners": "^2.9.0",
+    "dotenv": "^16.3.1",
+    "env": "workspace:^",
+    "gradient-string": "^2.0.2",
+    "lib": "workspace:^",
+    "mongoose": "^7.5.2",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.16",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}

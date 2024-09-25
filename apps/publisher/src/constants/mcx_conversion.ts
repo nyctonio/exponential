@@ -1,0 +1,18 @@
+export const mcx_conversion = [
+  { name: 'ALUMINI', lotSize: 1000 },
+  { name: 'ALUMINIUM', lotSize: 5000 },
+  { name: 'COPPER', lotSize: 2500 },
+  { name: 'CRUDEOIL', lotSize: 100 },
+  { name: 'GOLD', lotSize: 100 },
+  { name: 'GOLDGUINEA', lotSize: 1 },
+  { name: 'GOLDM', lotSize: 10 },
+  { name: 'GOLDPETAL', lotSize: 1 },
+  { name: 'LEAD', lotSize: 5000 },
+  { name: 'NATURALGAS', lotSize: 1250 },
+  { name: 'NICKEL', lotSize: 1500 },
+  { name: 'SILVER', lotSize: 30 },
+  { name: 'SILVERM', lotSize: 6 },
+  { name: 'SILVERMIC', lotSize: 1 },
+  { name: 'ZINC', lotSize: 5000 },
+  { name: 'ZINCMINI', lotSize: 1000 },
+];

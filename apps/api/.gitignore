@@ -1,0 +1,8 @@
+.env
+dist
+package-lock.json
+node_modules
+pnpm-lock.yaml
+.DS_Store
+ormconfig.json
+app.log
